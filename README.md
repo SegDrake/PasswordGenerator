@@ -1,38 +1,39 @@
-# 🔐 PasswordGenerator
+# PasswordGenerator
 
-A console password generator written in **C#** featuring input validation and automatic password complexity checks.
+A cryptographically secure console password generator written in **C#** utilizing `System.Security.Cryptography` for robust complexity and input handling.
 
-## ✨ Features
-- **Batch Generation:** Generate from **1 to 100** passwords in a single run.
-- **Custom Password Length:** Supports lengths from **12 to 128 characters** (enforcing a 12-character minimum security threshold).
-- **Complexity Enforcement:** Automatically verifies that every generated password includes digits, uppercase and lowercase letters, and special characters (`!@#%^&*?/|`).
-- **Input Validation:** Built-in error handling (`int.TryParse`) with red console alerts prevents crashes on invalid, empty, or out-of-range inputs.
+## Features
+- **Cryptographic Security:** Powered by `System.Security.Cryptography.RandomNumberGenerator` (CSPRNG).
+- **Batch Generation:** Create 1 to 100 passwords per execution.
+- **Custom Length:** Configurable from 12 to 128 characters (12-char minimum enforced).
+- **Complexity Checks:** Guarantees digits, upper/lowercase letters, and special symbols.
+- **Input Validation:** Handles invalid entries gracefully with prompt alerts.
 
-## 🖥️ Example Output
+## Example Output
 ```text
-Сколько паролей сгенерировать? (от 1 до 100): 5
-Введите длину пароля (минимум 12 символов): 15
+How many passwords to generate? (1 to 100): 5
+Enter password length (min 12): 15
 
-Будет сгенерировано: 5 паролей, длина каждого 15 символов.
+Generating 5 passwords, length 15 each.
 
-Пароль надежный: *Z^K5%YyVAN|ehp
-Пароль надежный: 9vBpQbv?1O6Wkf9
-Пароль надежный: 0CiPT5u87JFLHLb
-Пароль надежный: FPM%AD7^0oYdY%@
-Пароль надежный: XfKsS1k1jVyXuek
+Password strong: *Z^K5%YyVAN|ehp
+Password strong: 9vBpQbv?1O6Wkf9
+Password strong: 0CiPT5u87JFLHLb
+Password strong: FPM%AD7^0oYdY%@
+Password strong: XfKsS1k1jVyXuek
 ```
 
-## 🛠️ Tech Stack
-- **Language:** C#
-- **Framework:** .NET (Console Application)
+## Tech Stack
+- C# / .NET Console Application
+- `System.Security.Cryptography`
 
-## 🚀 Getting Started
-1. Clone the repository:
+## Getting Started
+1. Clone the repo:
    ```bash
    git clone https://github.com
    ```
-2. Navigate to the project directory and run the application via terminal:
+2. Run via terminal:
    ```bash
    dotnet run
    ```
-   Alternatively, open `GeneratedPassword.csproj` in **Visual Studio** and press `F5`.
+   Or open the project in Visual Studio and press `F5`.
