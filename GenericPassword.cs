@@ -47,7 +47,7 @@ namespace GeneratedPassword
                 }
                 if (hasSpecial && hasDigit && hasUpper)
                 {
-                    Console.WriteLine("Strong password: " + password);
+                    Console.WriteLine("Password strong: " + password);
                 }
                 else
                 {
