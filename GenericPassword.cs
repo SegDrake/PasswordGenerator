@@ -28,7 +28,6 @@ namespace GeneratedPassword
         {
             string arrayCharPassword = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#%^&*?/|";
             Random ram = new Random();
-            int arrayNamber = -1;
             for(int i = 0; i<count; i++)
             {
                 string password = "";
@@ -37,8 +36,7 @@ namespace GeneratedPassword
                 bool hasSpecial = false;
                 for(int j = 0; j < length; j++)
                 {
-                    arrayNamber = ram.Next(0, arrayCharPassword.Length);
-                    char c = arrayCharPassword[arrayNamber];
+                    char c = arrayCharPassword[ram.Next(0, arrayCharPassword.Length)];
                     password += c;
                         if (char.IsDigit(c))                        
                            hasDigit = true;
