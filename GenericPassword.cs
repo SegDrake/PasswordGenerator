@@ -6,9 +6,9 @@ namespace GeneratedPassword
     {
         static void Main()
         {
-            int count = ReadValidInt("Сколько паролей сгенерировать? (от 1 до 100): " , 1 , 100, "Ошибка: введите целое число от 1 до 100.");
-            int length = ReadValidInt("Введите длину пароля(минимум 12 символов): ", 12,128,"Ошибка: длина должна быть целым числом от 12 до 128.");
-            Console.WriteLine($"\nБудет сгенерировано: {count} паролей, длина каждого {length} символов.\n");
+            int count = ReadValidInt("How many passwords to generate? (1 to 100): " , 1 , 100, "Error: please enter an integer between 1 and 100.");
+            int length = ReadValidInt("Enter password length (minimum 12 characters): ", 12,128,"Error: length must be an integer between 12 and 128.");
+            Console.WriteLine($"\nGenerating: {count} passwords, {length} characters each.\n");
             Generated(count, length);
         }
         static int ReadValidInt(string prompt,int min, int max, string errorMessage)
