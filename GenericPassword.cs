@@ -39,7 +39,7 @@ namespace GeneratedPassword
                 {
                     arrayNamber = ram.Next(0, arrayCharPassword.Length);
                     char c = arrayCharPassword[arrayNamber];
-                    password += arrayCharPassword[arrayNamber];
+                    password += c;
                         if (char.IsDigit(c))                        
                            hasDigit = true;
                         else if (char.IsUpper(c))
