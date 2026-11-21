@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 namespace GeneratedPassword
 {
     class GenericPassword
@@ -27,7 +28,6 @@ namespace GeneratedPassword
         static void Generated(int count, int length)
         {
             string arrayCharPassword = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#%^&*?/|";
-            Random ram = new Random();
             for(int i = 0; i<count; i++)
             {
                 string password = "";
@@ -36,7 +36,7 @@ namespace GeneratedPassword
                 bool hasSpecial = false;
                 for(int j = 0; j < length; j++)
                 {
-                    char c = arrayCharPassword[ram.Next(0, arrayCharPassword.Length)];
+                    char c = arrayCharPassword[RandomNumberGenerator.GetInt32(0, arrayCharPassword.Length)];
                     password += c;
                         if (char.IsDigit(c))                        
                            hasDigit = true;
