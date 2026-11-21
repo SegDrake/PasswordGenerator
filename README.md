@@ -12,9 +12,9 @@ A cryptographically secure console password generator written in **C#** utilizin
 ## Example Output
 ```text
 How many passwords to generate? (1 to 100): 5
-Enter password length (min 12): 15
+Enter password length (minimum 12 characters): 15
 
-Generating 5 passwords, length 15 each.
+Generating: 5 passwords, length 15 each.
 
 Password strong: *Z^K5%YyVAN|ehp
 Password strong: 9vBpQbv?1O6Wkf9
