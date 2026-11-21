@@ -14,7 +14,7 @@ namespace GeneratedPassword
         {
             while (true) 
             {
-                Console.Write(prompt);
+                Console.Write(prompt); 
                 string? input = Console.ReadLine();
                 if (int.TryParse(input, out int result) && result >= min && result <= max)
                     return result;
